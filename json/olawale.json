@@ -1,0 +1,5 @@
+[
+    {"laptop":"dell", "school":true, "age": 12},
+    {"laptop":"HP", "school":true, "age": 32},
+    {"laptop":"Toshiba", "school":false, "age": 74}
+]
