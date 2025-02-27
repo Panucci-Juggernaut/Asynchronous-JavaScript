@@ -3,7 +3,7 @@ const template = (callback) => {
     const request = new XMLHttpRequest();
 
     request.addEventListener('readystatechange', () => {
-        if(request.readyState === 4 && request.status ){
+        if(request.readyState === 4 && request.status === 200 ){
             const data = JSON.parse(request.responseText);
             callback(undefined, data);
         }else if(request.readyState === 4){
@@ -27,7 +27,7 @@ const template2 = (resource, callback) => {
     const request = new XMLHttpRequest();
 
     request.addEventListener('readystatechange', () => {
-        if(request.readyState === 4 && request.status ){
+        if(request.readyState === 4 && request.status === 200 ){
             const data = JSON.parse(request.responseText);
             callback(undefined, data);
         }else if(request.readyState === 4){
@@ -54,7 +54,7 @@ const template3 = (resource) => {
         const request = new XMLHttpRequest();
 
         request.addEventListener('readystatechange', () => {
-            if(request.readyState === 4 && request.status ){
+            if(request.readyState === 4 && request.status === 200 ){
                 const data = JSON.parse(request.responseText);
                 resolve(data);
             }else if(request.readyState === 4){
@@ -80,7 +80,7 @@ const template4 = (resource) => {
         const request = new XMLHttpRequest();
 
         request.addEventListener('readystatechange', () => {
-            if(request.readyState === 4 && request.status ){
+            if(request.readyState === 4 && request.status === 200 ){
                 const data = JSON.parse(request.responseText);
                 resolve(data);
             }else if(request.readyState === 4){
